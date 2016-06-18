@@ -1,0 +1,6 @@
+on fs
+    symlink /dev/block/platform/soc/7464900.sdhci /dev/block/bootdevice
+
+on boot
+    write /sys/class/android_usb/android0/idVendor 18d1
+    write /sys/class/android_usb/android0/idProduct 2${ro.usb.pid_suffix}
