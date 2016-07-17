@@ -15,7 +15,7 @@
 /boot/modem_fs2        emmc      /dev/block/bootdevice/by-name/modemst2	flags=display="modem_fs2 "Baseband"";backup=emmc;mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0;
 
 #/persistent     emmc      /dev/block/bootdevice/by-name/frp            flags=display="FRP";backup=emmc;mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0;
-/firmware       vfat       /dev/block/bootdevice/by-name/modem           flags=display="Firmware";mounttodecrypt;fsflags=ro,context=u:object_r:firmware_file:s0
+/firmware       vfat       /dev/block/bootdevice/by-name/modem           flags=display="Firmware";mounttodecrypt;fsflags=ro,context=u:object_r:firmware_file:s0;
 /dsp            ext4       /dev/block/bootdevice/by-name/dsp
 /persist        ext4       /dev/block/bootdevice/by-name/persist
 /keymaster      emmc       /dev/block/bootdevice/by-name/keymaster

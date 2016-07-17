@@ -86,7 +86,7 @@ TW_NEW_ION_HEAP := true
 TW_NEVER_UNMOUNT_SYSTEM := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone4/temp
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-BOARD_KERNEL_CMDLINE := androidboot.hardware=/dev/block/platform/soc/7464900.sdhci
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += cma=16M@0-0xffffffff coherent_pool=2M enforcing=0
 #endif
