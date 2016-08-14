@@ -8,7 +8,7 @@
 /sdcard1         vfat      /dev/block/mmcblk1p1                        flags=display="Micro SDcard";storage;wipeingui;removable;
 /usbdisk         auto      /dev/block/sda1    /dev/block/sda           flags=display="USB OTG";storage;wipeingui;removable;
 /idd             ext4      /dev/block/bootdevice/by-name/diag          flags=display="Diag";backup=1;
-/rca             ext4      /dev/block/bootdevice/by-name/apps_log      flags=display="AppsLog";backup=1;usermrf;
+#/rca             ext4      /dev/block/bootdevice/by-name/apps_log      flags=display="AppsLog";backup=1;usermrf;
 /oem             ext4      /dev/block/bootdevice/by-name/oem           flags=display="OEM";backup=1;
 /qns             ext4      /dev/block/bootdevice/by-name/Qnovo         flags=display="Qnovo";backup=1;
 
