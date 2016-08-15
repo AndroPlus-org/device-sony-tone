@@ -1,7 +1,7 @@
 # mount point    fstype    device            
 
-/recovery        emmc      /dev/block/bootdevice/by-name/FOTAKernel    flags=backup=emmc;display="FOTAKernel";
-/ta              emmc      /dev/block/bootdevice/by-name/TA            flags=backup=emmc;display="TA "Trim-Area"";
+/recovery        emmc      /dev/block/bootdevice/by-name/FOTAKernel    flags=backup=1;display="FOTAKernel";
+/ta              emmc      /dev/block/bootdevice/by-name/TA            flags=backup=1;display="TA "Trim-Area"";
 /system          ext4      /dev/block/bootdevice/by-name/system        flags=display="System";mounttodecrypt;
 /data            ext4      /dev/block/bootdevice/by-name/userdata      flags=encryptable=footer;length=-16384;retainlayoutversion;
 /cache           ext4      /dev/block/bootdevice/by-name/cache
@@ -12,11 +12,12 @@
 /oem             ext4      /dev/block/bootdevice/by-name/oem           flags=display="OEM";backup=1;
 /qns             ext4      /dev/block/bootdevice/by-name/Qnovo         flags=display="Qnovo";backup=1;
 
-#/boot/modem_fs1        emmc      /dev/block/bootdevice/by-name/modemst1    flags=display="modem_fs1 "Baseband"";backup=emmc;mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0;
-#/boot/modem_fs2        emmc      /dev/block/bootdevice/by-name/modemst2    flags=display="modem_fs2 "Baseband"";backup=emmc;mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0;
+/boot            emmc      /dev/block/bootdevice/by-name/boot    flags=backup=1;display="Kernel";
+/modem_fs1       emmc      /dev/block/bootdevice/by-name/modemst1    flags=display="modem_fs1 "Baseband"";backup=1;mounttodecrypt;subpartitionof=/boot;
+/modem_fs2       emmc      /dev/block/bootdevice/by-name/modemst2    flags=display="modem_fs2 "Baseband"";backup=1;mounttodecrypt;subpartitionof=/boot;
 
-#/persistent     emmc      /dev/block/bootdevice/by-name/frp            flags=display="FRP";backup=emmc;mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0;
-/firmware       vfat       /dev/block/bootdevice/by-name/modem           flags=display="Firmware";mounttodecrypt;fsflags=ro,context=u:object_r:firmware_file:s0;
-/dsp            ext4       /dev/block/bootdevice/by-name/dsp
-/persist        ext4       /dev/block/bootdevice/by-name/persist
-/keymaster      emmc       /dev/block/bootdevice/by-name/keymaster
+#/persistent     emmc      /dev/block/bootdevice/by-name/frp            flags=display="FRP";backup=1;mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0;
+/firmware        vfat      /dev/block/bootdevice/by-name/modem           flags=display="Firmware";mounttodecrypt;fsflags=ro,context=u:object_r:firmware_file:s0;
+/dsp             ext4      /dev/block/bootdevice/by-name/dsp
+/persist         ext4      /dev/block/bootdevice/by-name/persist
+/keymaster       emmc      /dev/block/bootdevice/by-name/keymaster
