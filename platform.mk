@@ -88,6 +88,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/fstab.qcom:root/fstab.qcom \
     $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+    $(SONY_ROOT)/sbin/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh \
     $(SONY_ROOT)/sbin/qseecomd:root/sbin/qseecomd \
     $(SONY_ROOT)/vendor/lib64/hw/keystore.msm8996.so:root/vendor/lib64/hw/keystore.msm8996.so \
     $(SONY_ROOT)/vendor/lib64/lib-sec-disp.so:root/vendor/lib64/lib-sec-disp.so \

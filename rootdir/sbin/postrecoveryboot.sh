@@ -1,0 +1,3 @@
+#!/sbin/sh
+stop sbinqseecomd
+
